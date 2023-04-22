@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de layout com CSS Grid</title>
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        .wrapper {
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-columns: 1fr 1fr 1fr;                         
+            grid-template-areas:
+              "header header header"
+              "nav nav nav"
+              "div1 div1 div2"
+              "footer footer footer";
+            height: 100vh;
+          }
+          
+        
+        header {
+          grid-area: header;
+          background-color: #333;
+          color: white;
+          padding: 20px;
+        }
+
+        .header-2{
+          background-color: #480496;
+          color: white;
+          padding: 20px;
+          height: 15%;
+        }
+        
+        .section-1{
+          background-color: #518759;
+          color: white;
+          padding: 20px;
+          height: 15%;
+        }
+
+        .section-2{
+          background-color: #68583d;
+          color: white;
+          padding: 20px;
+          height: 15%;
+        }
+        nav {
+          grid-area: nav;
+          background-color: #ccc;
+          padding: 20px;
+        }
+        .div{
+          background-color: #57df09;
+          padding: 20px;
+          height: 40%;
+        }
+        .div1 {
+          grid-area: div1;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+        
+        .div2 {
+          grid-area: div2;
+          background-color: #ba0f0f;
+          padding: 20px;
+        }
+        
+        .aside-1{
+          width: 100%;
+          height: 50%;
+          background-color: aqua;
+        }
+
+        .aside-2{
+          width: 100%;
+          height: 50%;
+          background-color: rgb(214, 205, 39);
+        }
+        
+        footer {
+          grid-area: footer;
+          background-color: #333;
+          color: white;
+          padding: 20px;
+        }
+
+        .footer-2{
+          background-color: rgb(9, 202, 138);
+          height: 15%;
+
+        }
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>Header</header>
+    <nav>Nav</nav>
+    <article class="div1">
+      <header class="header-2">
+         header-2
+      </header>
+      <div class="div">
+        div
+      </div>
+      <section class="section-1">
+          section-1
+      </section>
+      <section class="section-2">
+          section-2
+      </section>
+      <footer class="footer-2">
+          Footer-2
+      </footer>
+    </article>
+    <div class="div2">
+      <aside class="aside-1"></aside>
+      <aside class="aside-2"></aside>
+    </div>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>
